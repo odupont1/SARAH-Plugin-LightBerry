@@ -1,0 +1,11 @@
+
+.plugin-gridster.Lightberry .front {
+  background: #FFFFFF url('images/lightberry.jpg') center 30px;
+  background-size:   150px 99px;
+  background-repeat: no-repeat;
+}
+
+.plugin-gridster.Lightberry .back {
+  background: #FFFFFF;
+}
+}

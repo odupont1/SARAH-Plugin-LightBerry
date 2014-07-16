@@ -1,0 +1,46 @@
+<h1>Un peu d'aide ?</h1>
+<p></p>
+<h2>Parametres de base :</h2>
+<p>Renseignez l'ip, le port (default : 22), l'utilisateur et le mot de passe a utiliser pour etablir la connection sur le LighBerry (Raspberry pi).</p>
+
+<h2>Fonctionnement :</h2>
+<p>Le LightBerry fonctionnant sur/avec un Rasberry Pi, je n'ai pas voulu modifier ou ajouter des scripts sur celui-ci. J'ai donc cherche une maniere de faire plus "friendly" pour le controler.<br>
+J'ai donc utiliser le travail de "Mad Rippeur" (plugin SSH) : pourquoi reinventer la roue ?<br>
+Apres avoir etablie une connexion SSH sur le Rasberry, on pilote le Lightberry via Hyperion-remote.<br>
+Le fichier XML appel, pour chaque "actions" demandees, un script de commandes ".sh" se trouvant dans le repertoire <b>"/bin/scripts"</b> du plugin.<br>
+Exemple du fichier "hyperion_blue.sh" : <b>sudo /usr/bin/hyperion-remote --priority 50 --color blue --duration 0</b><br>
+("sudo" permet d'executer la commande comme si l'utilisateur avec lequel vous etes connecte etait "administrateur". Le reste parle de lui meme, non ? ^^ )<br>
+A vous de jouer !
+</p>
+
+<h2>Les "scripts" :</h2>
+<p>Dans le repertoire <b>"/bin/scripts"</b> du plugin, creez un fichier 'nom_de_l_action.sh' contenant l'action a executer (voir la liste des commandes possible).</p>
+
+<h2>Le fichier XML :</h2>
+<p>Ajouter dans le fichier "Lightberry.xml" la nouvelle "action" a executer comme ceci : <item>Lightberry action a realiser<tag>out.action.cmd_bash="action_a_realiser.sh"</tag></item> </p>
+
+<h2>Liste des commandes du serveur Hyperion :</h2>
+<p>Usage : hyperion-remote [OPTIONS]</p>
+<ul>
+	<li>-a, --address <arg>       Adresse du serveur Hyperion [default: localhost:19444].</li>
+	<li>-p, --priority <arg>      Utilise pour indiquer la priorite du canal (plus le nombre est eleve, plus la priorite est haute) [par defaut: 100].</li>
+	<li>-d, --duration <arg>      Specifie combien de temps les leds doivent etre allumes en millseconds [defaut: infini].</li>
+	<li>-c, --color <arg>         Allume toutes les leds sur une couleur constante (valeur hex RRGGBB ou un nom de couleur. La couleur peut etre repete plusieurs fois : RRGGBBRRGGBB).</li>
+	<li>-i, --image <arg>         Allume les leds selon les couleurs de l'image indiquee.</li>
+	<li>-e, --effect <arg>        Active l'effect dont le nom est indique.</li>
+			--effectArgs <arg>    Arguments a utiliser en combinaison avec l'effet specifie. Doit etre une chaine de l'objet JSON.</li>
+	<li>-l, --list                Liste les infos du serveur Hyperion.</li>
+	<li>-x, --clear               Reset les donnees pour le canal de priorite indiquee par l'option -p.</li>
+			--clearall            Reset les donnees de tous les canaux actifs.</li>
+	<li>-s, --saturation <arg>    Indique le gain de saturation HSV des leds.</li>
+	<li>-v, --value <arg>         Indique la valeur du gain HSV des leds.</li>
+	<li>-g, --gamma <arg>         Indique la valeur gamma des leds (3 valeurs separees par des espaces).</li>
+	<li>-t, --threshold <arg>     Indique la valeur du threshold des leds (3 valeurs separees par des espaces - entre 0.0 et 1.0).</li>
+	<li>-b, --blacklevel <arg>    Indique la valeur blacklevel des leds (3 valeurs separees par des espaces - entre 0.0 et 1.0).</li>
+	<li>-w, --whitelevel <arg>    Indique la valeur whitelevel des leds (3 valeurs separees par des espaces - entre 0.0 et 1.0).</li>
+	<li>--print,				  Affiche la chaine JSON (input et output) sur stdout.</li>
+	<li>-h, --help                Affiche l'aide.</li>
+</ul>
+<p></p>
+<p></p>
+<p></p>

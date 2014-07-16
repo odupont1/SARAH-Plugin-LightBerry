@@ -1,0 +1,12 @@
+{
+	"modules"	: { 
+		"Lightberry"		: {
+			"description"	: "Pilotage du LightBerry via Hyperion-Remote en SSH.",
+			"version"	: "1.0",
+			"Lighberry_ip"	: "IP",
+			"Lighberry_ssh_port"	: "PORT",
+			"Lighberry_user"	: "UTILISATEUR",
+			"Lighberry_pass"	: "MOTDEPASSE"
+    		}
+  	}
+}

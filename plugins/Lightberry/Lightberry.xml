@@ -1,0 +1,26 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleLightberry" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	<rule id="ruleLightberry" scope="public">
+	<tag>out.action=new Object(); </tag>
+	<item weight="2">Sarah</item>
+		<one-of>
+				<item>Lightberry start<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
+				<item>allume le Lightberry<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
+				<item>Lightberry stop<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
+				<item>éteint le Lightberry<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>      
+
+				<item>reset le Lightberry<tag>out.action.cmd_bash="hyperion_clear-all.sh"</tag></item>
+				<item>Lightberry reset<tag>out.action.cmd_bash="hyperion_clear-all.sh"</tag></item>				
+      
+				<item>Lightberry en rouge<tag>out.action.cmd_bash="hyperion_red.sh"</tag></item>	
+				<item>Lightberry en vert<tag>out.action.cmd_bash="hyperion_green.sh"</tag></item>	
+				<item>Lightberry en bleu<tag>out.action.cmd_bash="hyperion_blue.sh"</tag></item>
+				<item>Lightberry en orange<tag>out.action.cmd_bash="hyperion_orange.sh"</tag></item>
+				<item>Lightberry en blanc<tag>out.action.cmd_bash="hyperion_white.sh"</tag></item>				
+				
+				<item>Lightberry arc en ciel<tag>out.action.cmd_bash="hyperion_rainbow.sh"</tag></item>
+				<item>Lightberry k 2000<tag>out.action.cmd_bash="hyperion_k2000.sh"</tag></item>
+				<item>Lightberry snake<tag>out.action.cmd_bash="hyperion_snake.sh"</tag></item>	
+		</one-of>
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/Lightberry";</tag>
+	</rule>
+</grammar>
