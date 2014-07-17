@@ -1,0 +1,1 @@
+sudo /usr/bin/hyperion-remote -p 50 --effect "Red mood blobs" --duration 0

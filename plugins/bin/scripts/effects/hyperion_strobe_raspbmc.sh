@@ -1,0 +1,1 @@
+sudo /usr/bin/hyperion-remote -p 50 --effect "Strobe Raspbmc" --duration 0

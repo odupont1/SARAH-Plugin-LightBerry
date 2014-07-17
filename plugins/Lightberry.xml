@@ -3,23 +3,38 @@
 	<tag>out.action=new Object(); </tag>
 	<item weight="2">Sarah</item>
 		<one-of>
-				<item>Lightberry start<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
-				<item>allume le Lightberry<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
-				<item>Lightberry stop<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>
-				<item>éteint le Lightberry<tag>out.action.cmd_bash="hyperion_Stop-Start.sh"</tag></item>      
+				<!-- Commandes -->
+				<item>Lightberry start<tag>out.action.cmd_bash="commands/hyperion_Stop-Start.sh"</tag></item>
+				<item>allume le Lightberry<tag>out.action.cmd_bash="commands/hyperion_Stop-Start.sh"</tag></item>
+				<item>Lightberry stop<tag>out.action.cmd_bash="commands/hyperion_Stop-Start.sh"</tag></item>
+				<item>éteint le Lightberry<tag>out.action.cmd_bash="commands/hyperion_Stop-Start.sh"</tag></item>      
 
-				<item>reset le Lightberry<tag>out.action.cmd_bash="hyperion_clear-all.sh"</tag></item>
-				<item>Lightberry reset<tag>out.action.cmd_bash="hyperion_clear-all.sh"</tag></item>				
+				<item>reset le Lightberry<tag>out.action.cmd_bash="commands/hyperion_clear-all.sh"</tag></item>
+				<item>Lightberry reset<tag>out.action.cmd_bash="commands/hyperion_clear-all.sh"</tag></item>				
       
-				<item>Lightberry en rouge<tag>out.action.cmd_bash="hyperion_red.sh"</tag></item>	
-				<item>Lightberry en vert<tag>out.action.cmd_bash="hyperion_green.sh"</tag></item>	
-				<item>Lightberry en bleu<tag>out.action.cmd_bash="hyperion_blue.sh"</tag></item>
-				<item>Lightberry en orange<tag>out.action.cmd_bash="hyperion_orange.sh"</tag></item>
-				<item>Lightberry en blanc<tag>out.action.cmd_bash="hyperion_white.sh"</tag></item>				
+				<!-- Couleurs -->
+				<item>Lightberry en rouge<tag>out.action.cmd_bash="colors/hyperion_red.sh"</tag></item>	
+				<item>Lightberry en vert<tag>out.action.cmd_bash="colors/hyperion_green.sh"</tag></item>	
+				<item>Lightberry en bleu<tag>out.action.cmd_bash="colors/hyperion_blue.sh"</tag></item>
+				<item>Lightberry en orange<tag>out.action.cmd_bash="colors/hyperion_orange.sh"</tag></item>
+				<item>Lightberry en blanc<tag>out.action.cmd_bash="colors/hyperion_white.sh"</tag></item>
+				<item>Lightberry en jaune<tag>out.action.cmd_bash="colors/hyperion_yellow.sh"</tag></item>
+				<item>Lightberry en fuchia<tag>out.action.cmd_bash="colors/hyperion_fuchia.sh"</tag></item>	
+				<item>Lightberry en violet<tag>out.action.cmd_bash="colors/hyperion_purple.sh"</tag></item>	
+				<item>Lightberry en rose<tag>out.action.cmd_bash="colors/hyperion_pink.sh"</tag></item>				
 				
-				<item>Lightberry arc en ciel<tag>out.action.cmd_bash="hyperion_rainbow.sh"</tag></item>
-				<item>Lightberry k 2000<tag>out.action.cmd_bash="hyperion_k2000.sh"</tag></item>
-				<item>Lightberry snake<tag>out.action.cmd_bash="hyperion_snake.sh"</tag></item>	
+				<!-- Effects -->
+				<item>Lightberry k 2000<tag>out.action.cmd_bash="effects/hyperion_k2000.sh"</tag></item>
+				<item>Lightberry variation bleu<tag>out.action.cmd_bash="effects/hyperion_blue_mood_blobs.sh"</tag></item>
+				<item>Lightberry variation verte<tag>out.action.cmd_bash="effects/hyperion_green_mood_blobs.sh"</tag></item>
+				<item>Lightberry variation rouge<tag>out.action.cmd_bash="effects/hyperion_red_mood_blobs.sh"</tag></item>
+				<item>Lightberry arc en ciel lent<tag>out.action.cmd_bash="effects/hyperion_rainbow_mood.sh"</tag></item>
+				<item>Lightberry arc en ciel rapide<tag>out.action.cmd_bash="effects/hyperion_rainbow_swirl_fast.sh"</tag></item>
+				<item>Lightberry arc en ciel<tag>out.action.cmd_bash="effects/hyperion_rainbow_swirl.sh"</tag></item>
+				<item>Lightberry snake<tag>out.action.cmd_bash="effects/hyperion_snake.sh"</tag></item>	
+				<item>Lightberry strobe bleu<tag>out.action.cmd_bash="effects/hyperion_strobe_blue.sh"</tag></item>
+				<item>Lightberry strobe violet<tag>out.action.cmd_bash="effects/hyperion_strobe_raspbmc.sh"</tag></item>
+				<item>Lightberry strobe blanc<tag>out.action.cmd_bash="effects/hyperion_strobe_white.sh"</tag></item>
 		</one-of>
 		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/Lightberry";</tag>
 	</rule>

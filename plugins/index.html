@@ -14,10 +14,55 @@ A vous de jouer !
 </p>
 
 <h2>Les "scripts" :</h2>
-<p>Dans le repertoire <b>"/bin/scripts"</b> du plugin, creez un fichier 'nom_de_l_action.sh' contenant l'action a executer (voir la liste des commandes possible).</p>
+<p>Dans le repertoire <b>"/bin/scripts"</b> du plugin, creez un fichier 'nom_de_l_action.sh' contenant l'action a executer (voir la liste des commandes possible).<br>
+En fonction de l'action realisee par le script, placez le dans un des repertoires suivants :<br>
+<b>
+<ul>
+	<li>Commands</li>
+	<li>Colors</li>
+	<li>Effects</li>			
+</ul>
+</b>
+</p>
 
 <h2>Le fichier XML :</h2>
-<p>Ajouter dans le fichier "Lightberry.xml" la nouvelle "action" a executer comme ceci : <item>Lightberry action a realiser<tag>out.action.cmd_bash="action_a_realiser.sh"</tag></item> </p>
+<p>Liste des commandes disponibles :<br>
+
+<b><-- Commandes --></b>
+<ul>
+	<li>Lightberry start </li>
+	<li>allume le Lightberry</li>
+	<li>Lightberry stop</li>
+	<li>eteint le Lightberry</li>      
+	<li>reset le Lightberry</li>
+	<li>Lightberry reset</li>				
+</ul>
+
+<b><-- Couleurs --></b>
+<ul>
+	<li>Lightberry en rouge</li>	
+	<li>Lightberry en vert</li>	
+	<li>Lightberry en bleu</li>
+	<li>Lightberry en orange</li>
+	<li>Lightberry en blanc</li>				
+</ul>
+
+<b><-- Effects --></b>
+<ul>
+	<li>Lightberry k 2000</li>
+	<li>Lightberry variation bleu</li>
+	<li>Lightberry variation verte</li>
+	<li>Lightberry variation rouge</li>
+	<li>Lightberry arc en ciel lent</li>
+	<li>Lightberry arc en ciel rapide</li>
+	<li>Lightberry arc en ciel</li>
+	<li>Lightberry snake</li>	
+	<li>Lightberry strobe bleu</li>
+	<li>Lightberry strobe violet</li>
+	<li>Lightberry strobe blanc</li>
+</ul>
+
+ </p>
 
 <h2>Liste des commandes du serveur Hyperion :</h2>
 <p>Usage : hyperion-remote [OPTIONS]</p>
@@ -42,5 +87,52 @@ A vous de jouer !
 	<li>-h, --help                Affiche l'aide.</li>
 </ul>
 <p></p>
-<p></p>
-<p></p>
+<h2>Meilleurs reglages pour le LightBerry :</h2>
+<p>Apres "quelques" recherches sur le Net et beaucoup de tests, il semblerait que les valeurs suivantes soient (pour moi) tres corrects.<br>
+Elles sont a apporter au fichier : <b>"hyperion.config.json"</b> qui se trouve dans le repertoire : <b>"/etc"</b>.<br>
+Avant toutes modifications, sauvegardez le fichier d'origine, par exemple dans le repertoire : <b>"/home/pi/"</b>.<br>
+<br>
+hsv :
+<ul>
+	<li>saturationGain : 2.2000</li>
+    <li>valueGain : 1.0000</li>
+</ul>
+
+red :
+<ul>
+    <li>threshold : 0.0000</li>
+    <li>gamma : 2.3000</li>
+    <li>blacklevel : 0.0000</li>
+    <li>whitelevel : 1.0000</li>
+</ul>
+	
+green :
+<ul>
+    <li>threshold : 0.0000</li>
+    <li>gamma : 1.7000</li>
+    <li>blacklevel : 0.0000</li>
+    <li>whitelevel : 0.4000</li>
+</ul>
+
+blue :
+<ul>
+    <li>threshold : 0.2500</li>
+    <li>gamma : 1.5000</li>
+    <li>blacklevel : 0.0000</li>
+    <li>whitelevel : 0.2000</li>
+</ul>
+
+smoothing :
+<ul>
+    <li>type : 'linear'</li>
+    <li>time_ms : 100</li>
+    <li>updateFrequency : 20.0000</li>
+</ul>	
+		
+</p>
+<p>Si vous voulez un "rouge" moins prononce, changez son 'whitelevel' de 1.0000 a 0.8000</p>
+<p>Vous pouvez maintenant tester vos reglages (couleurs, saturation, ...) avec la video suivante : <a href="https://www.youtube.com/watch?v=sr_vL2anfXA">https://www.youtube.com/watch?v=sr_vL2anfXA</a> </p>
+<br>
+<p>Si vous trouvez des astuces, meilleurs reglages, ect ..., faites nous en profiter !</p>
+<br>
+<br>

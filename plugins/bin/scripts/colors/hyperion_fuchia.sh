@@ -1,0 +1,1 @@
+sudo /usr/bin/hyperion-remote --priority 50 --color D02FB3 --duration 0
